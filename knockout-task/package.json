@@ -1,0 +1,9 @@
+{
+  "dev": "lite-server",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "knockout": "^3.4.2",
+    "lite-server": "^2.3.0"
+  }
+}

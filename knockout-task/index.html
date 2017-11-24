@@ -1,0 +1,56 @@
+<head>
+    <title>Currencies table</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="styles/custom.css" rel="stylesheet">
+
+    <body>
+        <!-- first part -->
+        <div id="firstPart" class="container">
+            <div class="page-header"><h1>First</h1></div>
+            <div class="table-responsive">
+                <table class="table table-bordered" data-bind='visible: columns().length > 0'>
+                    <thead>
+                        <tr data-bind='foreach: columns'><th data-bind="text: name"></th></tr>
+                    </thead>
+                </table>
+            </div>
+
+            <button class="btn btn-default" data-bind="click: useAddColumns">Add</button>
+        </div>
+        <!-- other parts -->
+        <div id="secondPart" class="container">
+            <div class="page-header"><h1>Second-Fourth</h1></div>
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-md-2">id</div>
+                    <div class="col-md-2">field1</div>
+                    <div class="col-md-2">field2</div>
+                    <div class="col-md-2">field3</div>
+                    <div class="col-md-2">field4</div>
+                </div>
+                <div data-bind='foreach: data'>
+                    <div class="row">
+                            <div class="col-md-2" data-bind="text: id"></div> 
+                            <div class="col-md-8" data-bind="foreach: nestedData">
+                                <div class="row">
+                                        <div class="col-md-3" data-bind="text: field1"></div>
+                                        <div class="col-md-3" data-bind="text: field2"></div>
+                                        <div class="col-md-3" data-bind="text: field3"></div>
+                                        <div class="col-md-3" data-bind="text: field4"></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default" data-bind="click: useRenderFunction">Render new row</button>
+            <button class="btn btn-default" data-bind="click: useUpdateFunction">Update second row</button>
+            <button class="btn btn-default" data-bind="click: useDeleteFunction">Delete first row</button>
+        </div>
+    </body>
+    <script type='text/javascript' src='knockout-3.4.2.js'></script>
+    <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="models/firstPointModel.js"></script>
+    <script type="text/javascript" src="models/secondPointModel.js"></script>
+</head>
