@@ -22,12 +22,6 @@
 
             IEnumerable<IGrouping<object, T>> groupedList = list.GroupBy(expression.Compile());
 
-            // TODO: delete
-            foreach (IGrouping<object, T> group in groupedList)
-            {
-                var data = (T)Activator.CreateInstance(typeof(T), @group, groupByList, averageList, sumList);
-            }
-
             return groupedList.Select(group => (T)Activator.CreateInstance(typeof(T), group, groupByList, averageList, sumList));
         }
 
