@@ -1,11 +1,9 @@
-﻿namespace GroupAggregationLibrary.Tests
+﻿using GroupOperationsLibrary.Models;
+
+namespace GroupOperationsLibrary.Tests
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
-
-    using GroupAggregationLibrary.Models;
-
     using NUnit.Framework;
 
     [TestFixture]

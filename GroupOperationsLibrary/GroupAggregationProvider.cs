@@ -1,4 +1,7 @@
-﻿namespace GroupAggregationLibrary
+﻿using GroupOperationsLibrary.Constants;
+using GroupOperationsLibrary.Models;
+
+namespace GroupOperationsLibrary
 {
     using System;
     using System.Collections.Generic;
@@ -6,8 +9,8 @@
     using System.Linq.Expressions;
     using System.Reflection;
 
-    using GroupAggregationLibrary.Constants;
-    using GroupAggregationLibrary.Models;
+    using GroupOperationsLibrary.Constants;
+    using GroupOperationsLibrary.Models;
 
     public class GroupAggregationProvider<T>
         where T : Data

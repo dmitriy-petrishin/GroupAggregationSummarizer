@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupAggregationLibrary.Tests", "GroupAggregationLibrary.Tests\GroupAggregationLibrary.Tests.csproj", "{047917FF-061B-4B3B-9E90-CD708EC1DE0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupOperationsLibrary.Tests", "GroupOperationsLibrary.Tests\GroupOperationsLibrary.Tests.csproj", "{047917FF-061B-4B3B-9E90-CD708EC1DE0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupAggregationLibrary", "GroupAggregationLibrary\GroupAggregationLibrary.csproj", "{54034799-69A3-4737-B343-CAB5FC33F3A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupOperationsLibrary", "GroupOperationsLibrary\GroupOperationsLibrary.csproj", "{54034799-69A3-4737-B343-CAB5FC33F3A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

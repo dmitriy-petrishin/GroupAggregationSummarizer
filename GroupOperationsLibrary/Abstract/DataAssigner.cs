@@ -1,11 +1,13 @@
-﻿namespace GroupAggregationLibrary.Abstract
+﻿using GroupOperationsLibrary.Models;
+
+namespace GroupOperationsLibrary.Abstract
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
 
-    using GroupAggregationLibrary.Models;
+    using GroupOperationsLibrary.Models;
 
     public abstract class DataAssigner
     {

@@ -1,9 +1,11 @@
-﻿namespace GroupAggregationLibrary.Models
+﻿using GroupOperationsLibrary.Abstract;
+
+namespace GroupOperationsLibrary.Models
 {
     using System.Collections.Generic;
     using System.Linq;
 
-    using GroupAggregationLibrary.Abstract;
+    using GroupOperationsLibrary.Abstract;
 
     public class Data : DataAssigner
     {

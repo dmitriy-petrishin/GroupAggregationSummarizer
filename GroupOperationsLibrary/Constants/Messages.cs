@@ -1,4 +1,4 @@
-﻿namespace GroupAggregationLibrary.Constants
+﻿namespace GroupOperationsLibrary.Constants
 {
     public static class Messages
     {

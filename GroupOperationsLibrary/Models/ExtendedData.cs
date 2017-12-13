@@ -1,4 +1,4 @@
-﻿namespace GroupAggregationLibrary.Models
+﻿namespace GroupOperationsLibrary.Models
 {
     using System.Collections.Generic;
     using System.Linq;
