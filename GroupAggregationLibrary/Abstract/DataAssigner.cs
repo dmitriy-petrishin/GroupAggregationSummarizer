@@ -45,9 +45,6 @@
             this.SetGroups(group, groupList);
             this.SetAverages(group, averageList);
             this.SetSums(group, sumList);
-
-            // Tried to use function delegates but because of casting there was a problem to use that
-            // this.SetOne(this.AverageFunc, group, averageList);
         }
 
         private void SetAverages(IGrouping<object, Data> group, IEnumerable<string> averageList)
