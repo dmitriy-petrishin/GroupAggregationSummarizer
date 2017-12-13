@@ -1,7 +1,4 @@
-﻿using GroupOperationsLibrary.Constants;
-using GroupOperationsLibrary.Models;
-
-namespace GroupOperationsLibrary
+﻿namespace GroupOperationsLibrary
 {
     using System;
     using System.Collections.Generic;

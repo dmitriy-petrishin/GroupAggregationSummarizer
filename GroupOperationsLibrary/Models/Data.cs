@@ -1,6 +1,4 @@
-﻿using GroupOperationsLibrary.Abstract;
-
-namespace GroupOperationsLibrary.Models
+﻿namespace GroupOperationsLibrary.Models
 {
     using System.Collections.Generic;
     using System.Linq;
