@@ -1,7 +1,7 @@
 # Group Operations Library
 Flexible library for operations like grouping, aggregation, summarizing.
 
-## Instruction for using.
+## Instruction.
 1. + Get inherited from GroupOperationsBase.cs in object you need to be grouped, averaged, summarized.
    + Implement constructor chain for child class.
 
@@ -35,7 +35,7 @@ IEnumerable<ExtendedData> result = provider.Execute(
     new List<string> { "Quantity", "StockQuantity" });
 ```
 
-P.S. You can see and debug live examples in unit tests of the project.
+__P.S.__ You can see and debug live examples in unit tests of the project.
 
 
 
