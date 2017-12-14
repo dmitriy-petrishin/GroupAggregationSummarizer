@@ -20,7 +20,7 @@ public class Data : GroupOperationsBase
     }
 }
 ```
-2. Create new instance of GroupOperationsLibrary class and specify object type you want to be grouped and etc.
+2. Create new instance of GroupOperationsProvider class and specify object type you want to be grouped and etc.
 
 ```CSharp
 var provider = new GroupOperationsProvider<ExtendedData>();
