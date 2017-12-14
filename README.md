@@ -34,6 +34,7 @@ IEnumerable<ExtendedData> result = provider.Execute(
     new List<string> { "Price" },
     new List<string> { "Quantity", "StockQuantity" });
 ```
+___
 
 __P.S.__ You can see and debug live examples in unit tests of the project.
 
