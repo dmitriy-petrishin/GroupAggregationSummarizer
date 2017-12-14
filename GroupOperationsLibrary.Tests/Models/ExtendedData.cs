@@ -5,10 +5,7 @@ namespace GroupOperationsLibrary.Tests.Models
 {
     public class ExtendedData : Data
     {
-        public ExtendedData()
-        {
-            
-        }
+        public ExtendedData() { }
 
         public ExtendedData(
             IGrouping<object, Data> group,

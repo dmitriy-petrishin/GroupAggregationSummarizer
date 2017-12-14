@@ -1,6 +1,4 @@
-﻿using GroupOperationsLibrary.Abstract;
-
-namespace GroupOperationsLibrary
+﻿namespace GroupOperationsLibrary
 {
     using System;
     using System.Collections.Generic;
@@ -8,11 +6,20 @@ namespace GroupOperationsLibrary
     using System.Linq.Expressions;
     using System.Reflection;
 
-    using GroupOperationsLibrary.Constants;
+    using Constants;
+    using Abstract;
 
-    public class GroupAggregationProvider<T>
-        where T : DataAssigner
+    public class GroupOperationsProvider<T>
+        where T : GroupOperationsBase
     {
+        /// <summary>
+        /// Recieves list of the objects to grouping, averaging, summation and return transformated list with the same object type.
+        /// </summary>
+        /// <param name="list">List to transformation.</param>
+        /// <param name="groupByList">List of fields names to grouping.</param>
+        /// <param name="averageList">List of fields names to averaging.</param>
+        /// <param name="sumList">List of fields names to summation.</param>
+        /// <returns> Transformed list.</returns>
         public IEnumerable<T> Execute(
             IEnumerable<T> list,
             IEnumerable<string> groupByList,

@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\GroupOperationsBase.cs" />
+    <Compile Include="Abstract\IAveragable.cs" />
+    <Compile Include="Abstract\IGroupable.cs" />
+    <Compile Include="Abstract\ISummarizable.cs" />
     <Compile Include="Constants\Messages.cs" />
     <Compile Include="GroupOperationsProvider.cs" />
-    <Compile Include="Abstract\DataAssigner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

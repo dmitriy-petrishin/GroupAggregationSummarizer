@@ -1,4 +1,5 @@
-﻿using GroupOperationsLibrary.Tests.Models;
+﻿using System;
+using GroupOperationsLibrary.Tests.Models;
 
 namespace GroupOperationsLibrary.Tests
 {
@@ -14,7 +15,7 @@ namespace GroupOperationsLibrary.Tests
         {
             var list = this.GetExtendedList();
 
-            var provider = new GroupAggregationProvider<ExtendedData>();
+            var provider = new GroupOperationsProvider<ExtendedData>();
 
             IEnumerable<ExtendedData> result = provider.Execute(
                 list,
@@ -40,9 +41,9 @@ namespace GroupOperationsLibrary.Tests
         [Test]
         public void AggregateByTwoGroups()
         {
-            var list = this.GetList();
+            List<Data> list = this.GetList();
             
-            var provider = new GroupAggregationProvider<Data>();
+            var provider = new GroupOperationsProvider<Data>();
 
             IEnumerable<Data> result = provider.Execute(list, new List<string> { "Name", "Price" });
 
@@ -58,7 +59,7 @@ namespace GroupOperationsLibrary.Tests
         {
             List<Data> list = this.GetList();
 
-            var provider = new GroupAggregationProvider<Data>();
+            var provider = new GroupOperationsProvider<Data>();
             var result = provider.Execute(
                 list,
                 new List<string> { "Name" },
@@ -72,52 +73,48 @@ namespace GroupOperationsLibrary.Tests
             this.AssertDataObject(data1, 0, "AAA", 21, 0);
         }
 
-//// TODO: fix name of fields in grouping list
-//        [Test]
-//        public void InvalidFieldNameInQuantityList()
-//        {
-//            List<Data> item = this.GetList(1);
-//
-//            var provider = new GroupAggregationProvider<Data>();
-//
-//            try
-//            {
-//                provider.Execute(item, new List<string> { "AAA" }, new List<string> { "Fake" });
-//            }
-//            catch (Exception ex)
-//            {
-//                Assert.IsInstanceOf<NullReferenceException>(ex);
-//
-//                Assert.AreEqual(ex.Message, Constants.Messages.PropertyNotFound);
-//            }
-//        }
+        [Test]
+        public void InvalidFieldNameInQuantityList()
+        {
+            List<Data> item = this.GetList(3);
+
+            var provider = new GroupOperationsProvider<Data>();
+
+            IEnumerable<Data> result = provider.Execute(item, new List<string> { "Name" }, new List<string> { "Fake" });
+
+            List<Data> listedResult = result.ToList();
+            
+            Data data1 = listedResult[0];
+            
+            Assert.AreEqual(1, listedResult.Count);
+            
+            this.AssertDataObject(data1, 0, "AAA", 0, 0);
+        }
         
-// TODO: fix name of fields in grouping list
-//        [Test]
-//        public void InvalidFieldNameInSumList()
-//        {
-//            List<Data> item = this.GetList(1);
-//
-//            var provider = new GroupAggregationProvider<Data>();
-//
-//            try
-//            {
-//                provider.Execute(item, new List<string> { "AAA" }, null, new List<string> { "Fake" });
-//            }
-//            catch (Exception ex)
-//            {
-//                Assert.IsInstanceOf<NullReferenceException>(ex);
-//
-//                Assert.AreEqual(ex.Message, Constants.Messages.PropertyNotFound);
-//            }
-//        }
+        [Test]
+        public void InvalidFieldNameInSumList()
+        {
+            List<Data> item = this.GetList(3);
+
+            var provider = new GroupOperationsProvider<Data>();
+
+            IEnumerable<Data> result = provider.Execute(item, new List<string> { "Name" }, null, new List<string> { "Fake" });
+
+            List<Data> listedResult = result.ToList();   
+            
+            Data data1 = listedResult[0];
+            
+            Assert.AreEqual(1, listedResult.Count);
+            
+            this.AssertDataObject(data1, 0, "AAA", 0, 0);
+        }
 
         [Test]
         public void ReceiveFourGroupsOneSumOneAverage()
         {
             var list = this.GetList();
 
-            GroupAggregationProvider<Data> provider = new GroupAggregationProvider<Data>();
+            GroupOperationsProvider<Data> provider = new GroupOperationsProvider<Data>();
 
             IEnumerable<Data> result = provider.Execute(
                 list,
@@ -176,7 +173,7 @@ namespace GroupOperationsLibrary.Tests
             var list = new List<Data>
                 {
                     // 1
-                    new Data{ Id = 1, Name = "AAA", Quantity = 5, Price = 5 },
+                    new Data { Id = 1, Name = "AAA", Quantity = 5, Price = 5 },
                     new Data { Id = 2, Name = "AAA", Quantity = 6, Price = 6 },
                     new Data { Id = 34, Name = "AAA", Quantity = 10, Price = 4 },
 
