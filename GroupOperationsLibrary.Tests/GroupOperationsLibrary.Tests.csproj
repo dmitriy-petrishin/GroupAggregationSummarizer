@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GroupAggregationProviderTests.cs" />
+    <Compile Include="GroupOperationsProviderTests.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\ExtendedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

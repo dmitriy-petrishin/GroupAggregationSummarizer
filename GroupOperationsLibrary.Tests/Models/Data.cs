@@ -1,10 +1,9 @@
-﻿namespace GroupOperationsLibrary.Models
+﻿using System.Collections.Generic;
+using System.Linq;
+using GroupOperationsLibrary.Abstract;
+
+namespace GroupOperationsLibrary.Tests.Models
 {
-    using System.Collections.Generic;
-    using System.Linq;
-
-    using GroupOperationsLibrary.Abstract;
-
     public class Data : DataAssigner
     {
         public Data()

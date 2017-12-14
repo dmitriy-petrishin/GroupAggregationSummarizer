@@ -42,9 +42,7 @@
   <ItemGroup>
     <Compile Include="Constants\Messages.cs" />
     <Compile Include="GroupOperationsProvider.cs" />
-    <Compile Include="Models\Data.cs" />
     <Compile Include="Abstract\DataAssigner.cs" />
-    <Compile Include="Models\ExtendedData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

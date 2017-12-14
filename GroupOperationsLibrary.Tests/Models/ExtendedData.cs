@@ -1,8 +1,8 @@
-﻿namespace GroupOperationsLibrary.Models
-{
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
+namespace GroupOperationsLibrary.Tests.Models
+{
     public class ExtendedData : Data
     {
         public ExtendedData()

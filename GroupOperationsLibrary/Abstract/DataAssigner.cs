@@ -5,13 +5,11 @@
     using System.Linq;
     using System.Reflection;
 
-    using GroupOperationsLibrary.Models;
-
     public abstract class DataAssigner
     {
         protected DataAssigner() { }
         protected DataAssigner(
-            IGrouping<object, Data> group,
+            IGrouping<object, DataAssigner> group,
             IEnumerable<string> groupList,
             IEnumerable<string> averageList = null,
             IEnumerable<string> sumList = null)
@@ -24,7 +22,7 @@
             return Convert.ChangeType(obj, castTo);
         }
 
-        private dynamic GetNameFromGroup(IGrouping<object, Data> group, int count)
+        private dynamic GetNameFromGroup(IGrouping<object, DataAssigner> group, int count)
         {
             var result = this.Cast(group.Key, group.Key.GetType());
 
@@ -37,7 +35,7 @@
         }
 
         private void Initialize(
-            IGrouping<object, Data> group,
+            IGrouping<object, DataAssigner> group,
             IEnumerable<string> groupList = null,
             IEnumerable<string> averageList = null,
             IEnumerable<string> sumList = null)
@@ -47,7 +45,7 @@
             this.SetSums(group, sumList);
         }
 
-        private void SetAverages(IGrouping<object, Data> group, IEnumerable<string> averageList)
+        private void SetAverages(IGrouping<object, DataAssigner> group, IEnumerable<string> averageList)
         {
             if (averageList == null)
             {
@@ -65,7 +63,7 @@
             }
         }
 
-        private void SetGroups(IGrouping<object, Data> group, IEnumerable<string> groupList)
+        private void SetGroups(IGrouping<object, DataAssigner> group, IEnumerable<string> groupList)
         {
             if (groupList == null)
             {
@@ -87,7 +85,7 @@
             }
         }
 
-        private void SetSums(IGrouping<object, Data> group, IEnumerable<string> sumList)
+        private void SetSums(IGrouping<object, DataAssigner> group, IEnumerable<string> sumList)
         {
             if (sumList == null)
             {

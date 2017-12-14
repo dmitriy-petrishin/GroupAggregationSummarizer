@@ -1,4 +1,6 @@
-﻿namespace GroupOperationsLibrary
+﻿using GroupOperationsLibrary.Abstract;
+
+namespace GroupOperationsLibrary
 {
     using System;
     using System.Collections.Generic;
@@ -7,10 +9,9 @@
     using System.Reflection;
 
     using GroupOperationsLibrary.Constants;
-    using GroupOperationsLibrary.Models;
 
     public class GroupAggregationProvider<T>
-        where T : Data
+        where T : DataAssigner
     {
         public IEnumerable<T> Execute(
             IEnumerable<T> list,

@@ -1,4 +1,4 @@
-﻿using GroupOperationsLibrary.Models;
+﻿using GroupOperationsLibrary.Tests.Models;
 
 namespace GroupOperationsLibrary.Tests
 {
@@ -7,7 +7,7 @@ namespace GroupOperationsLibrary.Tests
     using NUnit.Framework;
 
     [TestFixture]
-    public class GroupAggregationProviderTests
+    public class GroupOperationsProviderTests
     {
         [Test]
         public void AggregateExtendedDataSummarizeQuantity()
@@ -72,7 +72,7 @@ namespace GroupOperationsLibrary.Tests
             this.AssertDataObject(data1, 0, "AAA", 21, 0);
         }
 
-        //// TODO: fix name of  fields in grouping list
+//// TODO: fix name of fields in grouping list
 //        [Test]
 //        public void InvalidFieldNameInQuantityList()
 //        {
@@ -92,7 +92,7 @@ namespace GroupOperationsLibrary.Tests
 //            }
 //        }
         
-// TODO: fix name of  fields in grouping list
+// TODO: fix name of fields in grouping list
 //        [Test]
 //        public void InvalidFieldNameInSumList()
 //        {
